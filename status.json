@@ -1,0 +1,37 @@
+{
+  "as_of": "2026-11-24T19:15:01.472941+05:30",
+  "block1_end_day": null,
+  "start": null,
+  "totals": {
+    "gold": {
+      "final": false,
+      "model_band_hits": 0,
+      "q2": {
+        "label": "too few days",
+        "luck_chance": null,
+        "signal_days": 0,
+        "wins": 0
+      },
+      "target": "GOLD_IBJA_AM",
+      "usable": 0,
+      "v0_band_hits": 0,
+      "verdict": "RUNNING",
+      "wins": 0
+    },
+    "silver": {
+      "final": false,
+      "model_band_hits": 0,
+      "q2": {
+        "label": "too few days",
+        "luck_chance": null,
+        "signal_days": 0,
+        "wins": 0
+      },
+      "target": "SILVER_IBJA_AM",
+      "usable": 0,
+      "v0_band_hits": 0,
+      "verdict": "RUNNING",
+      "wins": 0
+    }
+  }
+}
