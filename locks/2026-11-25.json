@@ -1,0 +1,145 @@
+{
+  "code_commit": "3e56362",
+  "day": "2026-11-25",
+  "errors": [],
+  "ibja_page_sha256": "9f325f385a423065db46a339d16fe989377f8697baafa0a4609ade3ce605dc2b",
+  "inputs": {
+    "GC=F": {
+      "fresh": true,
+      "time": "2026-11-25T08:49:57+05:30",
+      "value": 3555.3
+    },
+    "INR=X": {
+      "fresh": true,
+      "time": "2026-11-25T08:52:17+05:30",
+      "value": 92.9
+    },
+    "SI=F": {
+      "fresh": true,
+      "time": "2026-11-25T08:48:43+05:30",
+      "value": 40.74
+    }
+  },
+  "late": false,
+  "locked_at": "2026-11-25T09:00:05.797313+05:30",
+  "rule_sha256": "03ce332c20bc1678a30779a4d5c92edfe879d2817d83ec6f891e135111ae4ce4",
+  "rule_version": "1a.2",
+  "targets": {
+    "GOLDBEES_OPEN": {
+      "band_pct": 1.24,
+      "forecast": 101.3707,
+      "fx_now": 92.9,
+      "fx_ref": 92.90249633789062,
+      "fx_ref_time": "2026-11-23T15:30:00+05:30",
+      "metal": "gold",
+      "model_band": [
+        100.1137,
+        102.6277
+      ],
+      "p_ref": 103.05,
+      "primary": false,
+      "ref_day": "2026-11-23",
+      "ref_time": "2026-11-23T15:30:00+05:30",
+      "status": "ok",
+      "unit": "INR",
+      "v0_band": [
+        101.7722,
+        104.3278
+      ],
+      "world_now": 3555.3,
+      "world_ref": 3614.10009765625,
+      "world_ref_time": "2026-11-23T15:30:00+05:30"
+    },
+    "GOLD_IBJA_AM": {
+      "band_pct": 1.59,
+      "forecast": 122542.9337,
+      "fx_now": 92.9,
+      "fx_ref": 92.91000366210938,
+      "fx_ref_time": "2026-11-23T16:30:00+05:30",
+      "metal": "gold",
+      "model_band": [
+        120594.5011,
+        124491.3663
+      ],
+      "p_ref": 124945.0,
+      "primary": true,
+      "q2": {
+        "forecast": 122812.3727,
+        "r_asia_pct": 0.2199,
+        "signal": true,
+        "status": "ok",
+        "w_0700": 3547.5,
+        "w_0700_time": "2026-11-25T06:30:00+05:30"
+      },
+      "ref_day": "2026-11-23",
+      "ref_time": "2026-11-23T17:00:00+05:30",
+      "status": "ok",
+      "unit": "INR per 10 g",
+      "v0_band": [
+        122958.3745,
+        126931.6255
+      ],
+      "world_now": 3555.3,
+      "world_ref": 3624.60009765625,
+      "world_ref_time": "2026-11-23T16:30:00+05:30"
+    },
+    "SILVERBEES_OPEN": {
+      "band_pct": 2.14,
+      "forecast": 140.5956,
+      "fx_now": 92.9,
+      "fx_ref": 92.90249633789062,
+      "fx_ref_time": "2026-11-23T15:30:00+05:30",
+      "metal": "silver",
+      "model_band": [
+        137.5868,
+        143.6043
+      ],
+      "p_ref": 146.38,
+      "primary": false,
+      "ref_day": "2026-11-23",
+      "ref_time": "2026-11-23T15:30:00+05:30",
+      "status": "ok",
+      "unit": "INR",
+      "v0_band": [
+        143.2475,
+        149.5125
+      ],
+      "world_now": 40.74,
+      "world_ref": 42.415000915527344,
+      "world_ref_time": "2026-11-23T15:30:00+05:30"
+    },
+    "SILVER_IBJA_AM": {
+      "band_pct": 2.57,
+      "forecast": 146323.1999,
+      "fx_now": 92.9,
+      "fx_ref": 92.91000366210938,
+      "fx_ref_time": "2026-11-23T16:30:00+05:30",
+      "metal": "silver",
+      "model_band": [
+        142562.6937,
+        150083.7062
+      ],
+      "p_ref": 152625.0,
+      "primary": true,
+      "q2": {
+        "forecast": 146197.5952,
+        "r_asia_pct": -0.0858,
+        "signal": true,
+        "status": "ok",
+        "w_0700": 40.775001525878906,
+        "w_0700_time": "2026-11-25T06:30:00+05:30"
+      },
+      "ref_day": "2026-11-23",
+      "ref_time": "2026-11-23T17:00:00+05:30",
+      "status": "ok",
+      "unit": "INR per kg",
+      "v0_band": [
+        148702.5375,
+        156547.4625
+      ],
+      "world_now": 40.74,
+      "world_ref": 42.4900016784668,
+      "world_ref_time": "2026-11-23T16:30:00+05:30"
+    }
+  }
+}
