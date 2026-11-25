@@ -1,0 +1,45 @@
+{
+  "day": "2026-11-25",
+  "pending": [],
+  "scored_at": "2026-11-25T19:15:02.178330+05:30",
+  "targets": {
+    "GOLDBEES_OPEN": {
+      "actual": 101.99,
+      "err_model_pct": -0.6072,
+      "err_naive_pct": 1.0393,
+      "lock_status": "ok",
+      "metal": "gold",
+      "model_band_hit": true,
+      "primary": false,
+      "usable": true,
+      "v0_band_hit": true,
+      "win": true
+    },
+    "GOLD_IBJA_AM": {
+      "lock_status": "ok",
+      "metal": "gold",
+      "primary": true,
+      "reason": "ibja_not_published: not published by window end",
+      "usable": false
+    },
+    "SILVERBEES_OPEN": {
+      "actual": 141.8,
+      "err_model_pct": -0.8494,
+      "err_naive_pct": 3.2299,
+      "lock_status": "ok",
+      "metal": "silver",
+      "model_band_hit": true,
+      "primary": false,
+      "usable": true,
+      "v0_band_hit": false,
+      "win": true
+    },
+    "SILVER_IBJA_AM": {
+      "lock_status": "ok",
+      "metal": "silver",
+      "primary": true,
+      "reason": "ibja_not_published: not published by window end",
+      "usable": false
+    }
+  }
+}
