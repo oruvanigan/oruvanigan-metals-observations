@@ -1,0 +1,85 @@
+{
+  "approved_by_user": "2026-11-26 ~09:50 IST, before IBJA published",
+  "condition": "counts only if this file reached GitHub before the IBJA 26 Nov AM rate was first seen published",
+  "counts_for": [
+    "GOLD_IBJA_AM",
+    "SILVER_IBJA_AM"
+  ],
+  "day": "2026-11-26",
+  "how": "same build_lock formula (code da51d5d) run by hand at 09:29 IST after the 09:00 lock was stale_input; numbers copied exactly from that run's output",
+  "inputs": {
+    "GC=F": {
+      "fresh": true,
+      "time": "2026-11-26T09:19:08+05:30",
+      "value": 3607.2
+    },
+    "INR=X": {
+      "fresh": true,
+      "time": "2026-11-26T09:29:07+05:30",
+      "value": 92.423
+    },
+    "SI=F": {
+      "fresh": true,
+      "time": "2026-11-26T09:19:09+05:30",
+      "value": 41.97
+    }
+  },
+  "kind": "amendment (rule 1a.4)",
+  "made_at": "2026-11-26T09:29:12.094564+05:30",
+  "not_counted": {
+    "GOLDBEES_OPEN": "made after the 09:15 open",
+    "SILVERBEES_OPEN": "made after the 09:15 open"
+  },
+  "targets": {
+    "GOLDBEES_OPEN": {
+      "forecast": 101.7324,
+      "p_ref": 100.11,
+      "status": "not_counted"
+    },
+    "GOLD_IBJA_AM": {
+      "band_pct": 1.59,
+      "forecast": 122919.6441,
+      "metal": "gold",
+      "model_band": [
+        120965.2218,
+        124874.0665
+      ],
+      "p_ref": 121038.0,
+      "primary": true,
+      "q2": null,
+      "q2_note": "Q2 forecast 123484.4867 shown, signal not recorded; Q2 not scored for this day",
+      "ref_day": "2026-11-25",
+      "status": "ok",
+      "unit": "INR per 10 g",
+      "v0_band": [
+        119113.4958,
+        122962.5042
+      ]
+    },
+    "SILVERBEES_OPEN": {
+      "forecast": 143.4225,
+      "p_ref": 138.4,
+      "status": "not_counted"
+    },
+    "SILVER_IBJA_AM": {
+      "band_pct": 2.57,
+      "forecast": 148221.5704,
+      "metal": "silver",
+      "model_band": [
+        144412.2761,
+        152030.8648
+      ],
+      "p_ref": 142945.0,
+      "primary": true,
+      "q2": null,
+      "q2_note": "Q2 forecast 149809.9719 shown, signal not recorded; Q2 not scored for this day",
+      "ref_day": "2026-11-25",
+      "status": "ok",
+      "unit": "INR per kg",
+      "v0_band": [
+        139271.3135,
+        146618.6865
+      ]
+    }
+  }
+}
