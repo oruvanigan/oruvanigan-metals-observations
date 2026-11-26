@@ -1,0 +1,47 @@
+{
+  "day": "2026-11-26",
+  "pending": [],
+  "scored_at": "2026-11-26T19:15:02.371137+05:30",
+  "targets": {
+    "GOLDBEES_OPEN": {
+      "lock_status": "stale_input",
+      "metal": "gold",
+      "primary": false,
+      "reason": "lock_stale_input",
+      "usable": false
+    },
+    "GOLD_IBJA_AM": {
+      "actual": 122982.0,
+      "amended": true,
+      "err_model_pct": -0.0507,
+      "err_naive_pct": -1.5807,
+      "lock_status": "ok",
+      "metal": "gold",
+      "model_band_hit": true,
+      "primary": true,
+      "usable": true,
+      "v0_band_hit": false,
+      "win": true
+    },
+    "SILVERBEES_OPEN": {
+      "lock_status": "stale_input",
+      "metal": "silver",
+      "primary": false,
+      "reason": "lock_stale_input",
+      "usable": false
+    },
+    "SILVER_IBJA_AM": {
+      "actual": 146933.0,
+      "amended": true,
+      "err_model_pct": 0.877,
+      "err_naive_pct": -2.7142,
+      "lock_status": "ok",
+      "metal": "silver",
+      "model_band_hit": true,
+      "primary": true,
+      "usable": true,
+      "v0_band_hit": false,
+      "win": true
+    }
+  }
+}

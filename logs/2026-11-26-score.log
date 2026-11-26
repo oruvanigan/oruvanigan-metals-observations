@@ -1,0 +1,31 @@
+2026-11-26 19:15:02 Block 1a · Metals · Thu 26 Nov
+
+IBJA estimate made at 09:29 (rule 1a.4, one-day amendment); ETFs not counted today.
+
+Gold 999 (per 10 g)
+Yesterday ₹1,21,038 → Expected ₹1,22,920 (▲ 1.55%)
+Actual ₹1,22,982 (▲ 1.61%) ✔ our estimate was closer
+
+Silver 999 (per kg)
+Yesterday ₹1,42,945 → Expected ₹1,48,222 (▲ 3.69%)
+Actual ₹1,46,933 (▲ 2.79%) ✔ our estimate was closer
+
+GOLDBEES (open)
+No estimate today (stale_input)
+Open: not available yet (lock_stale_input)
+
+SILVERBEES (open)
+No estimate today (stale_input)
+Open: not available yet (lock_stale_input)
+
+Overnight: US down, dollar flat, Asia up
+Score so far: Gold 1 of 1 · Silver 1 of 1 · GOLDBEES 0 of 0 · SILVERBEES 0 of 0
+
+— details —
+Gold AM ₹1,22,982 | forecast ₹1,22,920 (err -0.05%) | naive ₹1,21,038 (err -1.58%) → WIN · band: model in, v0 out
+Silver AM ₹1,46,933 | forecast ₹1,48,222 (err +0.88%) | naive ₹1,42,945 (err -2.71%) → WIN · band: model in, v0 out
+GOLDBEES open: not scored (lock_stale_input)
+SILVERBEES open: not scored (lock_stale_input)
+Context: Nasdaq -0.62% · S&P -0.25% · US10Y -1.14% · DXY +0.13% · Copper +1.20% · Brent +0.23% · Asia 4 up / 0 down
+Running: gold 1/1 wins, bands 1 vs 0 (RUNNING); Q2 0/0; silver 1/1 wins, bands 1 vs 0 (RUNNING); Q2 0/0; goldbees 0/0 wins, bands 0 vs 0 (RUNNING); silverbees 0/0 wins, bands 0 vs 0 (RUNNING)
+2026-11-26 19:15:03 Telegram sent

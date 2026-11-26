@@ -3,3 +3,7 @@ day,target,metal,primary,usable,reason,actual,err_model_pct,err_naive_pct,win,mo
 2026-11-25,GOLD_IBJA_AM,gold,True,False,ibja_not_published: not published by window end,,,,,,,,,
 2026-11-25,SILVERBEES_OPEN,silver,False,True,,141.8,-0.8494,3.2299,True,True,False,,,
 2026-11-25,SILVER_IBJA_AM,silver,True,False,ibja_not_published: not published by window end,,,,,,,,,
+2026-11-26,GOLDBEES_OPEN,gold,False,False,lock_stale_input,,,,,,,,,
+2026-11-26,GOLD_IBJA_AM,gold,True,True,,122982.0,-0.0507,-1.5807,True,True,False,,,
+2026-11-26,SILVERBEES_OPEN,silver,False,False,lock_stale_input,,,,,,,,,
+2026-11-26,SILVER_IBJA_AM,silver,True,True,,146933.0,0.877,-2.7142,True,True,False,,,

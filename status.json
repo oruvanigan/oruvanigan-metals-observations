@@ -1,11 +1,11 @@
 {
-  "as_of": "2026-11-25T19:15:02.178330+05:30",
+  "as_of": "2026-11-26T19:15:02.371137+05:30",
   "block1_end_day": null,
-  "start": null,
+  "start": "2026-11-26",
   "totals": {
     "gold": {
       "final": false,
-      "model_band_hits": 0,
+      "model_band_hits": 1,
       "q2": {
         "label": "too few days",
         "luck_chance": null,
@@ -13,12 +13,12 @@
         "wins": 0
       },
       "target": "GOLD_IBJA_AM",
-      "usable": 0,
+      "usable": 1,
       "v0_band_hits": 0,
       "verdict": "RUNNING",
-      "wins": 0
+      "wins": 1
     },
-    "silver": {
+    "goldbees": {
       "final": false,
       "model_band_hits": 0,
       "q2": {
@@ -27,7 +27,37 @@
         "signal_days": 0,
         "wins": 0
       },
+      "target": "GOLDBEES_OPEN",
+      "usable": 0,
+      "v0_band_hits": 0,
+      "verdict": "RUNNING",
+      "wins": 0
+    },
+    "silver": {
+      "final": false,
+      "model_band_hits": 1,
+      "q2": {
+        "label": "too few days",
+        "luck_chance": null,
+        "signal_days": 0,
+        "wins": 0
+      },
       "target": "SILVER_IBJA_AM",
+      "usable": 1,
+      "v0_band_hits": 0,
+      "verdict": "RUNNING",
+      "wins": 1
+    },
+    "silverbees": {
+      "final": false,
+      "model_band_hits": 0,
+      "q2": {
+        "label": "too few days",
+        "luck_chance": null,
+        "signal_days": 0,
+        "wins": 0
+      },
+      "target": "SILVERBEES_OPEN",
       "usable": 0,
       "v0_band_hits": 0,
       "verdict": "RUNNING",
