@@ -1,0 +1,85 @@
+{
+  "code_commit": "3e56362",
+  "day": "2026-11-26",
+  "errors": [],
+  "ibja_page_sha256": "93e6dd512acec2a9034eac78083aec7a5c96dd78f4229bca01e1fe05ae77fd6a",
+  "inputs": {
+    "GC=F": {
+      "fresh": true,
+      "time": "2026-11-26T08:50:01+05:30",
+      "value": 3603.9
+    },
+    "INR=X": {
+      "fresh": false,
+      "time": "2026-11-26T04:00:09+05:30",
+      "value": 92.22
+    },
+    "SI=F": {
+      "fresh": true,
+      "time": "2026-11-26T08:49:59+05:30",
+      "value": 41.86
+    }
+  },
+  "late": false,
+  "locked_at": "2026-11-26T09:00:05.380059+05:30",
+  "rule_sha256": "03ce332c20bc1678a30779a4d5c92edfe879d2817d83ec6f891e135111ae4ce4",
+  "rule_version": "1a.2",
+  "targets": {
+    "GOLDBEES_OPEN": {
+      "band_pct": 1.24,
+      "metal": "gold",
+      "p_ref": 100.11,
+      "primary": false,
+      "ref_day": "2026-11-25",
+      "ref_time": "2026-11-25T15:30:00+05:30",
+      "status": "stale_input",
+      "unit": "INR",
+      "v0_band": [
+        98.8686,
+        101.3514
+      ]
+    },
+    "GOLD_IBJA_AM": {
+      "band_pct": 1.59,
+      "metal": "gold",
+      "p_ref": 121038.0,
+      "primary": true,
+      "ref_day": "2026-11-25",
+      "ref_time": "2026-11-25T17:00:00+05:30",
+      "status": "stale_input",
+      "unit": "INR per 10 g",
+      "v0_band": [
+        119113.4958,
+        122962.5042
+      ]
+    },
+    "SILVERBEES_OPEN": {
+      "band_pct": 2.14,
+      "metal": "silver",
+      "p_ref": 138.4,
+      "primary": false,
+      "ref_day": "2026-11-25",
+      "ref_time": "2026-11-25T15:30:00+05:30",
+      "status": "stale_input",
+      "unit": "INR",
+      "v0_band": [
+        135.4382,
+        141.3618
+      ]
+    },
+    "SILVER_IBJA_AM": {
+      "band_pct": 2.57,
+      "metal": "silver",
+      "p_ref": 142945.0,
+      "primary": true,
+      "ref_day": "2026-11-25",
+      "ref_time": "2026-11-25T17:00:00+05:30",
+      "status": "stale_input",
+      "unit": "INR per kg",
+      "v0_band": [
+        139271.3135,
+        146618.6865
+      ]
+    }
+  }
+}
