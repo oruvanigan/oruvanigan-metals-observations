@@ -1,9 +1,9 @@
 {
   "name": "Block 1a - Metals Edition",
-  "rule_version": "1a.2",
-  "purpose": "Understand how global overnight price discovery reaches India before the market opens (India close -> Europe/US close -> Asia open -> India open). Scored question (Q1): does overnight world information, read at 09:00 IST, predict India's retail gold and silver rates (IBJA AM) better than 'same as the previous rate'? Exploratory question (Q2): does the Asian-morning move add anything beyond the 09:00 price?",
+  "rule_version": "1a.3",
+  "purpose": "Understand how global overnight price discovery reaches India before the market opens (India close -> Europe/US close -> Asia open -> India open). Scored question (Q1): does overnight world information, read at 09:00 IST, predict India's retail gold and silver rates (IBJA AM) better than 'same as the previous rate'? Exploratory question (Q2): does the Asian-morning move add anything beyond the 09:00 price? Rule 1a.3 adds the same Q1 test for the GOLDBEES and SILVERBEES opening price (09:15 IST), for market participants, judged separately from IBJA.",
   "plan": "https://claude.ai/artifact/VqP8iWWLNSDvALEWTuaUpn",
-  "approved": "2026-11-24 (plan); 2026-11-24 (snapshots A/B/C, Q2, context list)",
+  "approved": "2026-11-24 (plan); 2026-11-24 (snapshots A/B/C, Q2, context list); 2026-11-26 (1a.3: separate GOLDBEES and SILVERBEES verdicts, before the first scored lock)",
   "observational_only": true,
   "calendar": {
     "timezone": "Asia/Kolkata",
@@ -85,11 +85,12 @@
     "day_win": "abs(F - actual) < abs(P_ref - actual); an exact tie is not a win",
     "band_hit": "actual inside [centre*(1-band), centre*(1+band)], counted for the model band and the v0-interim band",
     "usable_day": "IBJA published today's AM rate; the 09:00 lock exists, was not late, had fresh inputs for that target and was pushed by 09:15; P_ref exists",
-    "verdict_per_metal": "primary target only; gold and silver separately",
-    "pass": "usable >= 15 AND wins >= ceil(0.70 * usable) AND model_band_hits >= v0_band_hits",
+    "verdict_per_metal": "four separate verdicts: IBJA gold, IBJA silver (primary, retail), GOLDBEES open, SILVERBEES open (market); no verdict affects another",
+    "pass": "per target: usable >= 15 AND wins >= ceil(0.70 * usable) AND model_band_hits >= v0_band_hits",
     "fail": "wins <= floor(0.50 * usable) OR model_band_hits < v0_band_hits",
     "inconclusive": "anything else, including usable < 15 at the hard stop",
-    "secondary": "ETF targets get the same daily scores, reported, no verdict"
+    "secondary": "ETF targets get the same daily scores and, from 1a.3, their own verdict with the same pass/fail tests; Q2 is IBJA only",
+    "usable_day_etf": "the NSE daily file for that day exists and its previous close equals P_ref; the 09:00 lock exists, was not late, had fresh inputs for that target and was pushed by 09:15"
   },
   "snapshots": {
     "note": "Historical context records. Never forecast targets; never used by the Q1 formula, scores or verdict; never used for Block 1. A missing item never makes a day unusable.",
