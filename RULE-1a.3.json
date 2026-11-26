@@ -1,0 +1,158 @@
+{
+  "name": "Block 1a - Metals Edition",
+  "rule_version": "1a.3",
+  "purpose": "Understand how global overnight price discovery reaches India before the market opens (India close -> Europe/US close -> Asia open -> India open). Scored question (Q1): does overnight world information, read at 09:00 IST, predict India's retail gold and silver rates (IBJA AM) better than 'same as the previous rate'? Exploratory question (Q2): does the Asian-morning move add anything beyond the 09:00 price? Rule 1a.3 adds the same Q1 test for the GOLDBEES and SILVERBEES opening price (09:15 IST), for market participants, judged separately from IBJA.",
+  "plan": "https://claude.ai/artifact/VqP8iWWLNSDvALEWTuaUpn",
+  "approved": "2026-11-24 (plan); 2026-11-24 (snapshots A/B/C, Q2, context list); 2026-11-26 (1a.3: separate GOLDBEES and SILVERBEES verdicts, before the first scored lock)",
+  "observational_only": true,
+  "calendar": {
+    "timezone": "Asia/Kolkata",
+    "weekdays_only": true,
+    "start": "first weekday after a clean dry run; recorded once in START by 'metals.py set-start'; target 2026-11-27 after a dry run on 2026-11-26; allowed 2026-11-26 to 2026-12-01",
+    "end": "the night Block 1's ledger reaches 20 ok observations (count only, read-only)",
+    "min_usable_days": 15,
+    "hard_stop": "2026-12-31"
+  },
+  "times_ist": {
+    "lock": "09:00",
+    "lock_deadline": "09:15",
+    "ibja_am_window": [
+      "12:30",
+      "15:00"
+    ],
+    "ibja_pm_window": [
+      "17:15",
+      "19:00"
+    ],
+    "score": "19:15",
+    "ibja_pm_reference_time": "17:00",
+    "etf_close_reference_time": "15:30",
+    "us_close_reference_time": "02:30",
+    "snapshot_a": "17:30",
+    "snapshot_b": "03:00 (Tue-Sat)",
+    "snapshot_c": "09:00 (with the lock)",
+    "asia_window_start": "07:00"
+  },
+  "input_max_age_minutes": 120,
+  "formula": "F = P_ref * (M_09:00 / M_ref) * (FX_09:00 / FX_ref); M_ref and FX_ref = close of the last completed hourly bar ending at or before the reference time of P_ref",
+  "fx_symbol": "INR=X",
+  "targets": {
+    "GOLD_IBJA_AM": {
+      "metal": "gold",
+      "primary": true,
+      "kind": "ibja",
+      "field": "gold999",
+      "unit": "INR per 10 g",
+      "world": "GC=F",
+      "band_pct": 1.59
+    },
+    "SILVER_IBJA_AM": {
+      "metal": "silver",
+      "primary": true,
+      "kind": "ibja",
+      "field": "silver999",
+      "unit": "INR per kg",
+      "world": "SI=F",
+      "band_pct": 2.57
+    },
+    "GOLDBEES_OPEN": {
+      "metal": "gold",
+      "primary": false,
+      "kind": "etf",
+      "symbol": "GOLDBEES",
+      "unit": "INR",
+      "world": "GC=F",
+      "band_pct": 1.24
+    },
+    "SILVERBEES_OPEN": {
+      "metal": "silver",
+      "primary": false,
+      "kind": "etf",
+      "symbol": "SILVERBEES",
+      "unit": "INR",
+      "world": "SI=F",
+      "band_pct": 2.14
+    }
+  },
+  "bands": {
+    "name": "v0-interim",
+    "coverage": 0.8,
+    "method": "1.2816 x population standard deviation of the last 65 daily moves up to 2026-11-23 (symmetric, normal 80%). IBJA: PM-to-PM moves from the IBJA page history (the only history published). ETF: open / previous close - 1 from NSE daily files whose content date matches the file name.",
+    "goldbees_note": "GOLDBEES 1.24% is the band frozen on 2026-11-22 for the manual period, kept as approved; the same method on data to 2026-11-23 gives 1.26%. Reproduce all four with derive_bands.py and the saved IBJA page tests/fixtures/ibja_2026-11-24_holiday.html.",
+    "model_band": "same width as v0-interim, centred on F instead of P_ref"
+  },
+  "scoring": {
+    "day_win": "abs(F - actual) < abs(P_ref - actual); an exact tie is not a win",
+    "band_hit": "actual inside [centre*(1-band), centre*(1+band)], counted for the model band and the v0-interim band",
+    "usable_day": "IBJA published today's AM rate; the 09:00 lock exists, was not late, had fresh inputs for that target and was pushed by 09:15; P_ref exists",
+    "verdict_per_metal": "four separate verdicts: IBJA gold, IBJA silver (primary, retail), GOLDBEES open, SILVERBEES open (market); no verdict affects another",
+    "pass": "per target: usable >= 15 AND wins >= ceil(0.70 * usable) AND model_band_hits >= v0_band_hits",
+    "fail": "wins <= floor(0.50 * usable) OR model_band_hits < v0_band_hits",
+    "inconclusive": "anything else, including usable < 15 at the hard stop",
+    "secondary": "ETF targets get the same daily scores and, from 1a.3, their own verdict with the same pass/fail tests; Q2 is IBJA only",
+    "usable_day_etf": "the NSE daily file for that day exists and its previous close equals P_ref; the 09:00 lock exists, was not late, had fresh inputs for that target and was pushed by 09:15"
+  },
+  "snapshots": {
+    "note": "Historical context records. Never forecast targets; never used by the Q1 formula, scores or verdict; never used for Block 1. A missing item never makes a day unusable.",
+    "A": "India close, 17:30 IST Mon-Fri. Sector state from Yahoo (NSE's index file is not out yet).",
+    "B": "Europe/US close, 03:00 IST Tue-Sat. Sector state from NSE's index file for the last session.",
+    "C": "Asia open, 09:00 IST with the lock. Sector state from NSE's index file for the last session.",
+    "columns": [
+      "timestamp",
+      "symbol",
+      "value",
+      "change_pct",
+      "source"
+    ],
+    "change_pct": "vs the instrument's previous daily close (Yahoo chartPreviousClose; NSE file Change(%))",
+    "file": "snapshots/<date taken>-<A|B|C>.csv; first row SNAPSHOT_<X> carries the time it was recorded",
+    "items": {
+      "GOLD": "GC=F",
+      "SILVER": "SI=F",
+      "COPPER": "HG=F",
+      "BRENT": "BZ=F",
+      "DXY": "DX-Y.NYB",
+      "USDINR": "INR=X",
+      "US10Y": "^TNX",
+      "NASDAQ": "^IXIC",
+      "SP500": "^GSPC",
+      "DAX": "^GDAXI",
+      "FTSE": "^FTSE",
+      "NIKKEI": "^N225",
+      "HANGSENG": "^HSI",
+      "SHANGHAI": "000001.SS",
+      "KOSPI": "^KS11"
+    },
+    "sector_state": {
+      "Nifty 50": "^NSEI",
+      "Nifty Bank": "^NSEBANK",
+      "Nifty IT": "^CNXIT",
+      "Nifty Metal": "^CNXMETAL",
+      "Nifty PSU Bank": "^CNXPSUBANK",
+      "Nifty Auto": "^CNXAUTO",
+      "Nifty FMCG": "^CNXFMCG",
+      "Nifty Pharma": "^CNXPHARMA",
+      "Nifty Energy": "^CNXENERGY",
+      "Nifty Realty": "^CNXREALTY",
+      "India VIX": "^INDIAVIX"
+    },
+    "gift_nifty": "no confirmed free source; one row with no value and source 'unavailable' until one is confirmed"
+  },
+  "q2_exploratory": {
+    "name": "Asia-morning momentum",
+    "targets": [
+      "GOLD_IBJA_AM",
+      "SILVER_IBJA_AM"
+    ],
+    "formula": "F_q2 = F * (W_09:00 / W_07:00): the world metal's 07:00-09:00 IST move (China/HK/Japan trading) is assumed to repeat once by the IBJA AM fix",
+    "w_0700": "close of the last completed hourly bar ending at or before 07:00 IST",
+    "signal": "abs(W_09:00 / W_07:00 - 1) >= 0.05%; days without a signal are left out",
+    "day_win": "abs(F_q2 - actual) < abs(F - actual), on usable Q1 days with a signal; ties are not wins",
+    "label": "fewer than 15 signal days: 'too few days'; else 'lead found' if wins >= ceil(0.7n), otherwise 'nothing found'. Reported with the chance of that many wins by luck. Never a PASS/FAIL and never part of the Q1 verdict."
+  },
+  "storage": {
+    "ibja": "parsed rates + page SHA256; the raw page only when parsing fails or no rate is found",
+    "nse": "only the GOLDBEES/SILVERBEES rows + the NSE file's SHA256, never a copy of the whole file",
+    "snapshots": "three small CSVs a day, 5 columns"
+  }
+}

@@ -1,9 +1,9 @@
 {
   "name": "Block 1a - Metals Edition",
-  "rule_version": "1a.3",
+  "rule_version": "1a.4",
   "purpose": "Understand how global overnight price discovery reaches India before the market opens (India close -> Europe/US close -> Asia open -> India open). Scored question (Q1): does overnight world information, read at 09:00 IST, predict India's retail gold and silver rates (IBJA AM) better than 'same as the previous rate'? Exploratory question (Q2): does the Asian-morning move add anything beyond the 09:00 price? Rule 1a.3 adds the same Q1 test for the GOLDBEES and SILVERBEES opening price (09:15 IST), for market participants, judged separately from IBJA.",
   "plan": "https://claude.ai/artifact/VqP8iWWLNSDvALEWTuaUpn",
-  "approved": "2026-11-24 (plan); 2026-11-24 (snapshots A/B/C, Q2, context list); 2026-11-26 (1a.3: separate GOLDBEES and SILVERBEES verdicts, before the first scored lock)",
+  "approved": "2026-11-24 (plan); 2026-11-24 (snapshots A/B/C, Q2, context list); 2026-11-26 (1a.3: separate GOLDBEES and SILVERBEES verdicts, before the first scored lock); 2026-11-26 (1a.4: one-day amendment for 26 Nov IBJA, approved before IBJA published)",
   "observational_only": true,
   "calendar": {
     "timezone": "Asia/Kolkata",
@@ -154,5 +154,19 @@
     "ibja": "parsed rates + page SHA256; the raw page only when parsing fails or no rate is found",
     "nse": "only the GOLDBEES/SILVERBEES rows + the NSE file's SHA256, never a copy of the whole file",
     "snapshots": "three small CSVs a day, 5 columns"
+  },
+  "amendments": {
+    "2026-11-26": {
+      "file": "locks/2026-11-26-amend.json",
+      "push_stamp": "pushes/2026-11-26-amend.txt",
+      "targets": [
+        "GOLD_IBJA_AM",
+        "SILVER_IBJA_AM"
+      ],
+      "why": "the 09:00 lock was stale_input (USD/INR feed paused); the same formula was run at 09:29 IST, before IBJA's AM rate (~12:00) and before retail shops open (~10:00)",
+      "condition": "the amendment counts only if its push stamp is earlier than the IBJA AM capture time; otherwise the day stays not usable",
+      "etf": "not counted that day: GOLDBEES and SILVERBEES opened at 09:15, before the estimate",
+      "q2": "not scored that day"
+    }
   }
 }
