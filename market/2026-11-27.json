@@ -1,0 +1,18 @@
+{
+  "day": "2026-11-27",
+  "rows": {
+    "GOLDBEES": {
+      "close": 103.78,
+      "date": "2026-11-27",
+      "open": 102.44,
+      "prev_close": 100.96
+    },
+    "SILVERBEES": {
+      "close": 147.49,
+      "date": "2026-11-27",
+      "open": 145.95,
+      "prev_close": 141.48
+    }
+  },
+  "source_sha256": "784a7ca66cac4c398f8d9f4795f80321de98a5e954c7430e22c53c9ead024497"
+}

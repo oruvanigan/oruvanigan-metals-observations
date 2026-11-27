@@ -1,0 +1,31 @@
+2026-11-27 19:15:02 Block 1a · Metals · Fri 27 Nov
+
+Gold 999 (per 10 g)
+Yesterday ₹1,22,641 → Expected ₹1,23,744 (▲ 0.90%)
+Actual ₹1,25,316 (▲ 2.18%) ✔ our estimate was closer
+
+Silver 999 (per kg)
+Yesterday ₹1,47,347 → Expected ₹1,53,405 (▲ 4.11%)
+Actual ₹1,53,275 (▲ 4.02%) ✔ our estimate was closer
+
+GOLDBEES (open)
+Last close ₹100.96 → Expected ₹101.98 (▲ 1.01%)
+Opened ₹102.44 (▲ 1.47%) ✔ our estimate was closer
+
+SILVERBEES (open)
+Last close ₹141.48 → Expected ₹147.46 (▲ 4.23%)
+Opened ₹145.95 (▲ 3.16%) ✔ our estimate was closer
+
+Overnight: US down, dollar flat, Asia up
+Score so far: Gold 2 of 2 · Silver 2 of 2 · GOLDBEES 1 of 1 · SILVERBEES 1 of 1
+
+— details —
+Gold AM ₹1,25,316 | forecast ₹1,23,744 (err -1.25%) | naive ₹1,22,641 (err -2.13%) → WIN · band: model in, v0 out
+  Q2 Asia-morning ₹1,24,998 (err -0.25%) → better than mechanical
+Silver AM ₹1,53,275 | forecast ₹1,53,405 (err +0.08%) | naive ₹1,47,347 (err -3.87%) → WIN · band: model in, v0 out
+  Q2 Asia-morning ₹1,59,893 (err +4.32%) → not better than mechanical
+GOLDBEES open ₹102.44 | forecast ₹101.98 (err -0.45%) | naive ₹100.96 (err -1.44%) → WIN · band: model in, v0 out
+SILVERBEES open ₹145.95 | forecast ₹147.46 (err +1.04%) | naive ₹141.48 (err -3.06%) → WIN · band: model in, v0 out
+Context: Nasdaq -0.62% · S&P -0.25% · US10Y -1.14% · DXY +0.01% · Copper +4.32% · Brent +1.89% · Asia 4 up / 0 down
+Running: gold 2/2 wins, bands 2 vs 0 (RUNNING); Q2 1/1; silver 2/2 wins, bands 2 vs 0 (RUNNING); Q2 0/1; goldbees 1/1 wins, bands 1 vs 0 (RUNNING); silverbees 1/1 wins, bands 1 vs 0 (RUNNING)
+2026-11-27 19:15:03 Telegram sent

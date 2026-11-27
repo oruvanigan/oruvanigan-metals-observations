@@ -1,26 +1,26 @@
 {
-  "as_of": "2026-11-26T19:15:02.371137+05:30",
+  "as_of": "2026-11-27T19:15:02.299680+05:30",
   "block1_end_day": null,
   "start": "2026-11-26",
   "totals": {
     "gold": {
       "final": false,
-      "model_band_hits": 1,
+      "model_band_hits": 2,
       "q2": {
         "label": "too few days",
-        "luck_chance": null,
-        "signal_days": 0,
-        "wins": 0
+        "luck_chance": 0.5,
+        "signal_days": 1,
+        "wins": 1
       },
       "target": "GOLD_IBJA_AM",
-      "usable": 1,
+      "usable": 2,
       "v0_band_hits": 0,
       "verdict": "RUNNING",
-      "wins": 1
+      "wins": 2
     },
     "goldbees": {
       "final": false,
-      "model_band_hits": 0,
+      "model_band_hits": 1,
       "q2": {
         "label": "too few days",
         "luck_chance": null,
@@ -28,12 +28,27 @@
         "wins": 0
       },
       "target": "GOLDBEES_OPEN",
-      "usable": 0,
+      "usable": 1,
       "v0_band_hits": 0,
       "verdict": "RUNNING",
-      "wins": 0
+      "wins": 1
     },
     "silver": {
+      "final": false,
+      "model_band_hits": 2,
+      "q2": {
+        "label": "too few days",
+        "luck_chance": 1.0,
+        "signal_days": 1,
+        "wins": 0
+      },
+      "target": "SILVER_IBJA_AM",
+      "usable": 2,
+      "v0_band_hits": 0,
+      "verdict": "RUNNING",
+      "wins": 2
+    },
+    "silverbees": {
       "final": false,
       "model_band_hits": 1,
       "q2": {
@@ -42,26 +57,11 @@
         "signal_days": 0,
         "wins": 0
       },
-      "target": "SILVER_IBJA_AM",
+      "target": "SILVERBEES_OPEN",
       "usable": 1,
       "v0_band_hits": 0,
       "verdict": "RUNNING",
       "wins": 1
-    },
-    "silverbees": {
-      "final": false,
-      "model_band_hits": 0,
-      "q2": {
-        "label": "too few days",
-        "luck_chance": null,
-        "signal_days": 0,
-        "wins": 0
-      },
-      "target": "SILVERBEES_OPEN",
-      "usable": 0,
-      "v0_band_hits": 0,
-      "verdict": "RUNNING",
-      "wins": 0
     }
   }
 }

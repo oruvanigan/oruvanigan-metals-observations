@@ -1,0 +1,61 @@
+{
+  "day": "2026-11-27",
+  "pending": [],
+  "scored_at": "2026-11-27T19:15:02.299680+05:30",
+  "targets": {
+    "GOLDBEES_OPEN": {
+      "actual": 102.44,
+      "err_model_pct": -0.4457,
+      "err_naive_pct": -1.4447,
+      "lock_status": "ok",
+      "metal": "gold",
+      "model_band_hit": true,
+      "primary": false,
+      "usable": true,
+      "v0_band_hit": false,
+      "win": true
+    },
+    "GOLD_IBJA_AM": {
+      "actual": 125316.0,
+      "err_model_pct": -1.2547,
+      "err_naive_pct": -2.1346,
+      "lock_status": "ok",
+      "metal": "gold",
+      "model_band_hit": true,
+      "primary": true,
+      "q2_err_pct": -0.2537,
+      "q2_signal": true,
+      "q2_win": true,
+      "usable": true,
+      "v0_band_hit": false,
+      "win": true
+    },
+    "SILVERBEES_OPEN": {
+      "actual": 145.95,
+      "err_model_pct": 1.0373,
+      "err_naive_pct": -3.0627,
+      "lock_status": "ok",
+      "metal": "silver",
+      "model_band_hit": true,
+      "primary": false,
+      "usable": true,
+      "v0_band_hit": false,
+      "win": true
+    },
+    "SILVER_IBJA_AM": {
+      "actual": 153275.0,
+      "err_model_pct": 0.0847,
+      "err_naive_pct": -3.8676,
+      "lock_status": "ok",
+      "metal": "silver",
+      "model_band_hit": true,
+      "primary": true,
+      "q2_err_pct": 4.3178,
+      "q2_signal": true,
+      "q2_win": false,
+      "usable": true,
+      "v0_band_hit": false,
+      "win": true
+    }
+  }
+}
