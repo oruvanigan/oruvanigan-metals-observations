@@ -2,3 +2,12 @@
 2026-11-27 09:00:06 GOLD_IBJA_AM ok forecast=123743.6496 ref=122641.0 q2=124998.0425
 2026-11-27 09:00:06 SILVERBEES_OPEN ok forecast=147.464 ref=141.48 q2=None
 2026-11-27 09:00:06 SILVER_IBJA_AM ok forecast=153404.8378 ref=147347.0 q2=159893.1533
+2026-11-27T03:30:09+00:00 lock pushed
+2026-11-27 09:00:09 Block 1a · Metals · Fri 27 Nov · Morning estimate (09:00)
+Gold 999 (per 10 g): yesterday ₹1,22,641 → expected today ₹1,23,744 (▲ 0.90%)
+Silver 999 (per kg): yesterday ₹1,47,347 → expected today ₹1,53,405 (▲ 4.11%)
+GOLDBEES open (09:15): last close ₹100.96 → expected ₹101.98 (▲ 1.01%)
+SILVERBEES open (09:15): last close ₹141.48 → expected ₹147.46 (▲ 4.23%)
+Gold/Silver 999 = IBJA rate, before 3% GST and making charges. Experiment, not advice.
+2026-11-27 09:00:10 Telegram sent
+2026-11-27 09:00:13 snapshot C: 27 records, unavailable: GIFT_NIFTY
